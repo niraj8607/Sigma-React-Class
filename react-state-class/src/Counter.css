@@ -1,0 +1,18 @@
+.btn {
+  background-color: #4CAF50;   /* green */
+  color: white;                /* text color */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;                /* remove default border */
+  border-radius: 8px;          /* rounded corners */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;   /* darker green */
+}
+
+.btn:active {
+  transform: scale(0.95);      /* click effect */
+}
