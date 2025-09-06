@@ -1,0 +1,116 @@
+/* Import a clean, modern font */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap'); */
+
+/* --- General Body Styling (for context) --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+/* --- Main Comment Card Container --- */
+.comment-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* The "glass" effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* --- Form Title --- */
+.comment-container h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* --- Form Element Grouping --- */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Replaces the need for <br> tags */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* --- Unified Input & Textarea Styling --- */
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Remove arrows from number input */
+.comment-form input[type=number]::-webkit-inner-spin-button,
+.comment-form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.comment-form textarea {
+    resize: vertical; /* Allow vertical but not horizontal resize */
+    min-height: 100px;
+}
+
+/* --- Interactive Focus Effect --- */
+.comment-form input:focus,
+.comment-form textarea:focus {
+    outline: none;
+    border-color: #8e44ad;
+    box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.2);
+}
+
+/* --- Placeholder Text Styling --- */
+::placeholder {
+    color: #7f8c8d;
+    opacity: 1; /* Firefox */
+}
+
+/* --- Submit Button Styling --- */
+.comment-form button {
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.comment-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.comment-form button:active {
+    transform: translateY(-1px);
+}
